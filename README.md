@@ -2,7 +2,7 @@
 
 Aves: pica-pau-branco, noivinha-coroada, cardeal, tijerila, graúna, cardeal-do-banhado, sargento, tiziu, batuíra-de-papo-ferrugíneo, pomba-do-orvalho.
 
-Campos:Nome cinetífico, Família e tamanho.
+Campos:Nome cinetífico, cor e habitat.
 
 
 Enunciado:
@@ -41,6 +41,7 @@ Cada anotação é composta de data, horário, local e ave identificada.
 
 
 Enunciado
+
 Desenvolva um programa em Java que armazene dados de ao menos dez aves do catálogo de Fontana et alli. Não é necessário armazenar a imagem da ave.
 
 O programa deve permitir o registro das atividades do ornitólogo, com consulta e referência ao catálogo.
@@ -50,6 +51,7 @@ O programa deve ser executado em linha de comando no Linux ou Windows.  O progra
 
 
 Avaliação
+
 a) [1 pt] classe Ave contendo ao menos 3 campos do catálogo.
 
 b) [1 pt] classe Anotação contendo ao menos data e ave identificada.
