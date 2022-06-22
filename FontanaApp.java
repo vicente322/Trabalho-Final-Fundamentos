@@ -15,9 +15,15 @@ public class FontanaApp{
 
       public static void main(String args[]){
 
-            Ave ave1 = new Ave("passarinho");
+            Ave ave1 = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
 
             System.out.println(ave1.getName());
+
+            System.out.println(ave1.getScienceName());
+
+            System.out.println(ave1.getColor());
+
+            System.out.println(ave1.getHabitat());
 
       }
 
