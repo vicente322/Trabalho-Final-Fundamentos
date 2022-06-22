@@ -19,6 +19,7 @@ public class FontanaApp{
             Ave ave1 = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
             int op = 0;
 
+            //para execução do código se digitar 9 no menu
             while (op != 9){
 
                   System.out.println("\n\n\n\n\n\n\t        MENU");
@@ -28,6 +29,12 @@ public class FontanaApp{
                   System.out.println("\t9 - sair");
                   op = sc.nextInt();
 
+                  //Garante que resposta vai ser um dos números das opções
+                  while (op != 1 && op != 2 && op != 3 && op != 4 && op != 9){
+                        System.out.println("Opção invalida");
+                        op = sc.nextInt();
+                  }
+
                   switch(op){
                         case 1:
                               System.out.println("\n\t     CATALOGO");
@@ -36,8 +43,14 @@ public class FontanaApp{
                               System.out.println("\t2 - Nome científico da ave");
                               System.out.println("\t3 - Cor da ave");
                               System.out.println("\t4 - Habitat da ave");
-                              System.out.println("\t9 - Voltar");
+                              System.out.println("\t0 - Voltar");
                               op = sc.nextInt();
+
+                              //Garante que resposta vai ser um dos números das opções
+                              while(op != 1 && op != 2 && op != 3 && op != 4 && op != 0){
+                                    System.out.println("Opção invalida");
+                                    op = sc.nextInt();
+                              }
 
                               switch(op){
                                     case 1:
@@ -59,14 +72,20 @@ public class FontanaApp{
                                           System.out.println("\n\t HABITAT DA AVE");
                                           System.out.println("\t " + ave1.getHabitat());
                                           break;
+
+                                    case 0:
+                                          break;
                               }
                         break;
 
                         case 2:
                               System.out.println("\n\t     ANOTAÇÕES");
                               System.out.println("\t     =========");
+                              System.out.println("\t1 - Nova anotação");
+                              System.out.println("\t2 - Checar anotações");
 
                   }
+
             }
 
       }
