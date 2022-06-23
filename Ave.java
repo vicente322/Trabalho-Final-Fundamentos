@@ -11,14 +11,14 @@
 
 
 public class Ave{
-      
+
     private String name;
     private String scienceName;
     private String color;
     private String habitat;
 
     /**
-     * Constroi um cat�logo de aves
+     * Constroi um catalogo de aves
      *
      */
 
@@ -30,7 +30,7 @@ public class Ave{
     }
 
     /**
-     * Busca o nome comum do p�ssaro pesquisado
+     * Busca o nome comum do passaro pesquisado
      * @return o nome comum
      */
 
@@ -39,8 +39,8 @@ public class Ave{
     }
 
     /**
-     * Busca o nome cient�fico da ave
-     * @return o nome cient�fico
+     * Busca o nome cientifico da ave
+     * @return o nome cientifico
      */
 
     public String getScienceName(){
