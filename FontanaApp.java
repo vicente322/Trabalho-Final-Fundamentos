@@ -13,11 +13,30 @@ import java.util.Scanner;
 
 public class FontanaApp{
 
+    public static void searchName(Scanner sc, Ave[] a){
+
+        String research = sc.next();
+        String[] result = new String[a.length];
+        int resultCheck = 0; //Gambiarra pra conferir se nenhum resultado foi encontrado
+
+        for (int i = 0; i < 10; i++){
+            if (a[i] != null && (a[i].getName()).contains(research)){
+                System.out.println("\n" + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getColor() + ", " + a[i].getHabitat());
+                resultCheck++;
+            }
+            else if (i == 9 && resultCheck == 0){
+                System.out.println("\nNenhuma ave encontrada");
+            }
+        }
+
+    }
+
     public static void main(String args[]){
 
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
         aves[0] = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
+        aves[1] = new Ave("passaro", "Passarus normalus", "verde", "mato");
         int op = 0;
 
         //para execução do código se digitar 9 no menu
@@ -44,11 +63,12 @@ public class FontanaApp{
                 System.out.println("\t2 - Nome científico da ave");
                 System.out.println("\t3 - Cor da ave");
                 System.out.println("\t4 - Habitat da ave");
+                System.out.println("\t5 - Pesquisar ave pelo nome");
                 System.out.println("\t0 - Voltar");
                 op = sc.nextInt();
 
                 //Garante que resposta vai ser um dos números das opções
-                while(op != 1 && op != 2 && op != 3 && op != 4 && op != 0){
+                while(op != 1 && op != 2 && op != 3 && op != 4 && op != 5 && op != 0){
                     System.out.println("Opção invalida");
                     op = sc.nextInt();
                 }
@@ -72,6 +92,11 @@ public class FontanaApp{
                     case 4:
                     System.out.println("\n\t HABITAT DA AVE");
                     System.out.println("\t " + aves[0].getHabitat());
+                    break;
+
+                    case 5:
+                    System.out.println("\n\t PESQUISA POR NOME");
+                    searchName(sc, aves);
                     break;
 
                     case 0:
