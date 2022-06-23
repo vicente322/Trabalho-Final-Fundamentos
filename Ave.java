@@ -18,7 +18,7 @@ public class Ave{
     private String habitat;
 
     /**
-     * Constroi um catalogo de aves
+     * Constroi o objeto Ave
      *
      */
 
