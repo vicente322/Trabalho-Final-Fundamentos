@@ -16,7 +16,8 @@ public class FontanaApp{
     public static void main(String args[]){
 
         Scanner sc = new Scanner(System.in);
-        Ave ave1 = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
+        Ave[] aves = new Ave[10];
+        aves[0] = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
         int op = 0;
 
         //para execução do código se digitar 9 no menu
@@ -55,22 +56,22 @@ public class FontanaApp{
                 switch(op){
                     case 1:
                     System.out.println("\n\t NOME DA AVE");
-                    System.out.println("\t " + ave1.getName());
+                    System.out.println("\t " + aves[0].getName());
                     break;
 
                     case 2:
                     System.out.println("\n\t NOME CIENTIFICO DA AVE");
-                    System.out.println("\t " + ave1.getScienceName());
+                    System.out.println("\t " + aves[0].getScienceName());
                     break;
 
                     case 3:
                     System.out.println("\n\t COR DA AVE");
-                    System.out.println("\t " + ave1.getColor());
+                    System.out.println("\t " + aves[0].getColor());
                     break;
 
                     case 4:
                     System.out.println("\n\t HABITAT DA AVE");
-                    System.out.println("\t " + ave1.getHabitat());
+                    System.out.println("\t " + aves[0].getHabitat());
                     break;
 
                     case 0:
