@@ -20,6 +20,9 @@ import java.util.Scanner;
 */
 
 class Anotacao{
+    /**
+     * Permite que o observador faça anotações sobre as aves
+     */
 
     public static void main (String args[]){
         Scanner sc = new Scanner (System.in);
@@ -96,7 +99,7 @@ class Anotacao{
 
             case 9:
             data_mes = ("Setembro");
-            if (dia >= 1 && dia <= 31){
+            if (dia >= 1 && dia <= 30){
                 dia = dia;
             }
             break;
@@ -110,7 +113,7 @@ class Anotacao{
 
             case 11:
             data_mes = ("Novembro");
-            if (dia >= 1 && dia <= 31){
+            if (dia >= 1 && dia <= 30){
                 dia = dia;
             }
             break;
