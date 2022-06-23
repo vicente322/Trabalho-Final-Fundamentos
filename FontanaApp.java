@@ -4,7 +4,7 @@ import java.util.Scanner;
 *
 *@author Felipe Rodrigues
 *@author Gabriel Grossi
-*@author Gabriele Colaris
+*@author Gabriele Colares
 *@author Luiza Giovana
 *@author Vicente Hofmeister
 *@version 2022-06-20
