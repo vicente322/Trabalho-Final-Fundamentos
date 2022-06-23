@@ -1,35 +1,36 @@
 
 /**
 *
-* @author Felipe Rodrigues
-* @author Gabriel Grossi
-* @author Gabriele Colares
-* @author Luiza Giovana
-* @author Vicente Hofmeister
-* @version 2022-06-20
+*@author Felipe Rodrigues
+*@author Gabriel Grossi
+*@author Gabriele Colaris
+*@author Luiza Giovana
+*@author Vicente Hofmeister
+*@version 2022-06-20
 */
 
 
 public class Ave{
+      
     private String name;
     private String scienceName;
     private String color;
     private String habitat;
 
     /**
-     * Constroi um catálogo de aves
-     * 
+     * Constroi um catï¿½logo de aves
+     *
      */
-    
+
     public Ave(String a, String b, String c, String d){
         name = a;
         scienceName = b;
         color = c;
         habitat = d;
     }
-    
+
     /**
-     * Busca o nome comum do pássaro pesquisado
+     * Busca o nome comum do pï¿½ssaro pesquisado
      * @return o nome comum
      */
 
@@ -38,10 +39,10 @@ public class Ave{
     }
 
     /**
-     * Busca o nome científico da ave
-     * @return o nome científico
+     * Busca o nome cientï¿½fico da ave
+     * @return o nome cientï¿½fico
      */
-    
+
     public String getScienceName(){
         return this.scienceName;
     }
@@ -50,7 +51,7 @@ public class Ave{
      * Busca a cor da ave
      * @return a cor
      */
-    
+
     public String getColor(){
         return this.color;
     }
@@ -59,7 +60,7 @@ public class Ave{
      * Busca o habitat da ave
      * @return o habitat
      */
-    
+
     public String getHabitat(){
         return this.habitat;
     }
