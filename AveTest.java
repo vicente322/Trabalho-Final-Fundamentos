@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
  * The test class Tests.
  *
  * @author Felipe Rodrigues
- *@author Gabriel Grossi
- *@author Gabriele Colares
- *@author Luiza Giovana
- *@author Vicente Hofmeister
+ * @author Gabriel Grossi
+ * @author Gabriele Colares
+ * @author Luiza Giovana
+ * @author Vicente Hofmeister
  * @version 2022-06-22
  */
 public class AveTest

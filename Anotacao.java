@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 /**
 *
-*@author Felipe Rodrigues
-*@author Gabriel Grossi
-*@author Gabriele Colares
-*@author Luiza Giovana
-*@author Vicente Hofmeister
-*@version 2022-06-20
+* @author Felipe Rodrigues
+* @author Gabriel Grossi
+* @author Gabriele Colares
+* @author Luiza Giovana
+* @author Vicente Hofmeister
+* @version 2022-06-20
 *   
 *   b) [1 pt] classe Anotação contendo ao menos data e ave identificada.
 *   
