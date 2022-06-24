@@ -38,6 +38,7 @@ public class FontanaApp{
 
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
+        Anotacao2[] caderno = new Anotacao2[10];
         aves[0] = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
         aves[1] = new Ave("passaro", "Passarus normalus", "verde", "mato");
         int op = 0;
@@ -112,6 +113,43 @@ public class FontanaApp{
                 System.out.println("\t     =========");
                 System.out.println("\t1 - Nova anotação");
                 System.out.println("\t2 - Checar anotações");
+                op = sc.nextInt();
+
+                //Garante que resposta vai ser um dos números das opções
+                while(op != 1 && op != 2 && op != 0){
+                    System.out.println("Opção invalida");
+                    op = sc.nextInt();
+                }
+
+                switch(op){
+
+                    case 1:
+                    String[] data;
+                    String[] horario;
+                    int minuto, hora, dia, mes, ano;
+                    String ave;
+
+                    System.out.println("Informe a data (dd/mm/aaaa)");
+                    data = sc.next().split("/");
+                    dia = Integer.parseInt(data[0]);
+                    mes = Integer.parseInt(data[1]);
+                    ano = Integer.parseInt(data[2]);
+
+                    System.out.println("Informe o horario (hh:mm)");
+                    horario = sc.next().split(":");
+                    hora = Integer.parseInt(horario[0]);
+                    minuto = Integer.parseInt(horario[1]);
+
+
+                    System.out.println("Informe a ave avistada");
+                    ave = sc.next();
+
+                    caderno[0] = new Anotacao2(minuto, hora, dia, mes, ano, ave);
+
+                    System.out.println(dia + "/" + mes + "/" + ano);
+                    System.out.println(hora + ":" + minuto);
+                    System.out.println(caderno[0].getAve());
+                }
 
             }
 

@@ -36,7 +36,7 @@ Em outros casos, o ornitólogo lembra parte do nome, cor ou habitat e precisa de
 
 
 
-Cada anotação é composta de data, horário, local e ave identificada. 
+Cada anotação é composta de data, horário, local e ave identificada.
 
 
 
@@ -62,7 +62,7 @@ d) [1 pt] leitura de dados de arquivo.
 
 e) [1 pt] gravação de dados para arquivo.
 
-f) [1 pt] consulta de aves por um ou mais campos do catálogo. 
+f) [1 pt] consulta de aves por um ou mais campos do catálogo.
 
 g) [1 pt] consulta de todas as aves avistadas em um certo mês do ano.
 
@@ -78,7 +78,7 @@ l) [1 pt] documentação JavaDoc completa.
 
 m) [1 pt] testes automáticos de todas as operações.
 
-  
+
 
 Penalidades
 1) Em caso de plágio ou fraude, todos os envolvidos recebem nota zero.
