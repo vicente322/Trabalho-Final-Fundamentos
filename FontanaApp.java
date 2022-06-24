@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class FontanaApp{
     /**
-     * Procura a ave pelo nome e retorna os dados associados à ela
+     * Procura a ave pelo nome e retorna os dados associados ï¿½ ela
      */
 
     public static void searchName(Scanner sc, Ave[] a){
@@ -38,7 +38,7 @@ public class FontanaApp{
 
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
-        Anotacao2[] caderno = new Anotacao2[10];
+        Anotacao[] caderno = new Anotacao[10];
         aves[0] = new Ave("passarinho", "Passarus diminutus", "azul", "campo");
         aves[1] = new Ave("passaro", "Passarus normalus", "verde", "mato");
         int op = 0;
@@ -144,7 +144,7 @@ public class FontanaApp{
                     System.out.println("Informe a ave avistada");
                     ave = sc.next();
 
-                    caderno[0] = new Anotacao2(minuto, hora, dia, mes, ano, ave);
+                    caderno[0] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
                     System.out.println(dia + "/" + mes + "/" + ano);
                     System.out.println(hora + ":" + minuto);
