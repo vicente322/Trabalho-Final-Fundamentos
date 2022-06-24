@@ -3,7 +3,7 @@
 *Classe utilizando Orientacao a Objeto
 */
 
-public class Anotacao2{
+public class Anotacao{
 
       private int minuto, hora, dia, mes, ano;
       private String ave;
@@ -12,7 +12,7 @@ public class Anotacao2{
       *Constroi o objeto Anotacao2
       *
       */
-      public Anotacao2(int min, int h, int d, int me, int a, String b){
+      public Anotacao(int min, int h, int d, int me, int a, String b){
             minuto = min;
             hora = h;
             dia = d;
@@ -25,3 +25,4 @@ public class Anotacao2{
             return this.ave;
       }
 }
+
