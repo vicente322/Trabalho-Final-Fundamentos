@@ -12,6 +12,9 @@ import java.util.Scanner;
 
 
 public class FontanaApp{
+    /**
+     * Procura a ave pelo nome e retorna os dados associados à ela
+     */
 
     public static void searchName(Scanner sc, Ave[] a){
 
