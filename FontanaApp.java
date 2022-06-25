@@ -15,6 +15,31 @@ public class FontanaApp{
     /**
      * Procura a ave pelo nome e retorna os dados associados � ela
      */
+	public static void catalogy(String[] args){
+	
+	Ave[] aves = new Ave[10];
+	
+	aves[0] = new Ave("pica-pau-branco", "", "branco", "campo com arores, arbustos ou arvoretas"); 
+	
+	aves[1] = new Ave("noivinha-coroada", "", "branco", "campo com arores, arbustos ou arvoretas" ); 
+	
+	aves[2] = new Ave("cardeal", "", "branco", "campo com arores, arbustos ou arvoretas" ); 
+	
+	aves[3] = new Ave("tijerila", "", "branco", "campo com arores, arbustos ou arvoretas"); 
+	
+	aves[4] = new Ave("grauna", "", "preto", "campo seco baixo");
+	
+	aves[5] = new Ave("cardeal-do-banhado", "", "preto", "banhado com espelho d'agua"); 
+	
+	aves[6] = new Ave("sargento", "", "preto", "banhado com espelho d'agua" ); 
+	
+	aves[7] = new Ave("tiziu", "", "preto", "campo com arores, arbustos ou arvoretas" ); 
+	
+	aves[8] = new Ave("batuíra-de-papo-ferruginio", "", "cinza", "campo seco baixo"); 
+	
+	aves[9] = new Ave("pomba-do-orvalho", "", "cinza", "campo com arores, arbustos ou arvoretas");
+	
+	}
 
     public static void searchName(Scanner sc, Ave[] a){
 
