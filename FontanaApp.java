@@ -177,8 +177,8 @@ public class FontanaApp{
 
                     caderno[0] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
-                    System.out.println(dia + "/" + mes + "/" + ano);
-                    System.out.println(hora + ":" + minuto);
+                    System.out.println(caderno[0].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
+                    System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
                     System.out.println(caderno[0].getAve());
                 }
 
