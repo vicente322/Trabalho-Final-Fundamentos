@@ -24,5 +24,25 @@ public class Anotacao{
       public String getAve(){
             return this.ave;
       }
-}
 
+      public int getMinuto(){
+          return this.minuto;
+      }
+
+      public int getHora(){
+          return this.hora;
+      }
+
+      public int getDia(){
+          return this.dia;
+      }
+
+      public int getMes(){
+          return this.mes;
+      }
+
+      public int getAno(){
+          return this.ano;
+      }
+
+}
