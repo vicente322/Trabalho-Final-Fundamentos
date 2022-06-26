@@ -52,15 +52,15 @@ O programa deve ser executado em linha de comando no Linux ou Windows.  O progra
 
 Avaliação
 
-a) [1 pt] classe Ave contendo ao menos 3 campos do catálogo.
+a) [1 pt] classe Ave contendo ao menos 3 campos do catálogo. FEITO
 
-b) [1 pt] classe Anotação contendo ao menos data e ave identificada.
+b) [1 pt] classe Anotação contendo ao menos data e ave identificada. FEITO
 
-c) [1 pt] classe FontanaApp contendo método main().
+c) [1 pt] classe FontanaApp contendo método main(). FEITO
 
-d) [1 pt] leitura de dados de arquivo.
+d) [1 pt] leitura de dados de arquivo. FEITO
 
-e) [1 pt] gravação de dados para arquivo.
+e) [1 pt] gravação de dados para arquivo. FEITO
 
 f) [1 pt] consulta de aves por um ou mais campos do catálogo.
 
@@ -68,9 +68,9 @@ g) [1 pt] consulta de todas as aves avistadas em um certo mês do ano.
 
 h) [1 pt] consulta de todas as aves de um certo habitat.
 
-i) [1 pt] arranjo para armazenar ao menos 10 aves do catálogo de aves de Fontana et alli.
+i) [1 pt] arranjo para armazenar ao menos 10 aves do catálogo de aves de Fontana et alli. FEITO
 
-j) [1 pt] arranjo para armazenar anotações do ornitólogo.
+j) [1 pt] arranjo para armazenar anotações do ornitólogo. FEITO
 
 k) [1 pt] repositório no GitHub, com contribuições de toda equipe.
 
