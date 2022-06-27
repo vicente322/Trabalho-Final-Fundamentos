@@ -180,6 +180,8 @@ public class FontanaApp{
                 System.out.println("\t     =========");
                 System.out.println("\t1 - Nova anotação");
                 System.out.println("\t2 - Checar anotações");
+                System.out.println("\t0 - Voltar");
+
                 op = sc.nextInt();
 
                 //Garante que resposta vai ser um dos números das opções
@@ -191,7 +193,6 @@ public class FontanaApp{
                 switch(op){
 
                     case 1:
-
                     if(contadorAnotacoes >= 10) {
                         System.out.println("Não é possível adicionar mais anotações");
                     }
@@ -218,15 +219,54 @@ public class FontanaApp{
 
                         caderno[contadorAnotacoes] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
+                        /*
                         System.out.println(caderno[contadorAnotacoes].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
                         System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
                         System.out.println(caderno[0].getAve());
+                        */
 
                         contadorAnotacoes++;
                     }
+                    break;
+
+                    case 2:
+                    System.out.println("\n\t     ANOTAÇÕES");
+                    System.out.println("\t     =========");
+                    System.out.println("\t1 - Chegar por número da anotação");
+                    System.out.println("\t2 - Checar por mês");
+                    System.out.println("\t0 - Voltar");
+                    op = sc.nextInt();
+
+                    //Garante que resposta vai ser um dos números das opções
+                    while(op != 1 && op != 2 && op != 0){
+                        System.out.println("Opção invalida");
+                        op = sc.nextInt();
+                    }
+
+                    switch(op){
+
+                        case 1:
+                        System.out.println("Insira o número da anotação desejada");
+                        int nAnotacao = sc.nextInt();
+
+                        while (nAnotacao > contadorAnotacoes){
+                            System.out.println("Número maior que o número atual de anotações");
+                            nAnotacao = sc.nextInt();
+                        }
+
+                        System.out.println("\n\nAnotação " + nAnotacao);
+                        System.out.println("Ave: " + caderno[nAnotacao - 1].getAve());
+                        System.out.printf("Data: %d/%d/%d\n", caderno[nAnotacao - 1].getDia(), caderno[nAnotacao - 1].getMes(), caderno[nAnotacao - 1].getAno());
+                        System.out.printf("Horario: %d:%2d", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto());
+
+                    }
 
                 }
+
             }
+
         }
+
     }
+
 }
