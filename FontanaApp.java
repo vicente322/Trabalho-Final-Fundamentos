@@ -94,12 +94,12 @@ public class FontanaApp{
         }
     }
 
-    public static void searchNumber(Scanner sc, Anotacao[] caderno){
+    public static void searchNumber(Scanner sc, Anotacao[] caderno, int contador){
 
         System.out.println("Insira o número da anotação desejada");
         int nAnotacao = sc.nextInt();
 
-        while (nAnotacao > contadorAnotacoes){
+        while (nAnotacao > contador){
             System.out.println("Número maior que o número atual de anotações");
             nAnotacao = sc.nextInt();
         }
@@ -275,7 +275,7 @@ public class FontanaApp{
                     switch(op){
 
                         case 1:
-                        searchNumber(sc, caderno);
+                        searchNumber(sc, caderno, contadorAnotacoes);
                         break;
 
                         case 2:
