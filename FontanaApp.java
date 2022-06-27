@@ -12,12 +12,10 @@ import java.util.Scanner;
 
 
 public class FontanaApp{
-    
+
     /**
      * Procura a ave pelo nome e retorna os dados associados � ela
      */
-	
-	}
 
     public static void searchName(Scanner sc, Ave[] a){
 
@@ -41,8 +39,8 @@ public class FontanaApp{
 
         String research = sc.next();
         String[] result = new String[a.length];
-        int resultCheck = 0; 
-        
+        int resultCheck = 0;
+
         for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getScienceName()).contains(research)){
                 System.out.println("\n" + a[i].getScienceName() + ", " + a[i].getName() + ", " + a[i].getColor() + ", " + a[i].getHabitat());
@@ -60,25 +58,25 @@ public class FontanaApp{
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
         Anotacao[] caderno = new Anotacao[10];
-        
-        aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas"); 
-    	
-    	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" ); 
-    	
-    	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" ); 
-    	
-    	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas"); 
-    	
+
+        aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");
+
+    	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" );
+
+    	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" );
+
+    	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas");
+
     	aves[4] = new Ave("grauna", "Gnorinopsar chopi", "preto", "campo seco baixo");
-    	
-    	aves[5] = new Ave("cardeal-do-banhado", "Amblyramphus holosericeus", "preto", "banhado com espelho d'agua"); 
-    	
-    	aves[6] = new Ave("sargento", "Agelasticus thilius,", "preto", "banhado com espelho d'agua" ); 
-    	
-    	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" ); 
-    	
-    	aves[8] = new Ave("batuíra-de-papo-ferruginio", "Oreopholus ruficollis", "cinza", "campo seco baixo"); 
-    	
+
+    	aves[5] = new Ave("cardeal-do-banhado", "Amblyramphus holosericeus", "preto", "banhado com espelho d'agua");
+
+    	aves[6] = new Ave("sargento", "Agelasticus thilius,", "preto", "banhado com espelho d'agua" );
+
+    	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" );
+
+    	aves[8] = new Ave("batuíra-de-papo-ferruginio", "Oreopholus ruficollis", "cinza", "campo seco baixo");
+
     	aves[9] = new Ave("pomba-do-orvalho", "Patagioenas maculosa", "cinza", "campo com arores, arbustos ou arvoretas");
         int op = 0;
 
