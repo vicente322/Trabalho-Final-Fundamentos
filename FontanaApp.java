@@ -103,20 +103,20 @@ public class FontanaApp{
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
         Anotacao[] caderno = new Anotacao[10];
-      
+
         int contadorAnotacoes = 0;
 
-      aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");    	
-    	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" );    	
-    	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" );     	
-    	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas"); 	
-    	aves[4] = new Ave("grauna", "Gnorinopsar chopi", "preto", "campo seco baixo");  	
-    	aves[5] = new Ave("cardeal-do-banhado", "Amblyramphus holosericeus", "preto", "banhado com espelho d'agua");    	
-    	aves[6] = new Ave("sargento", "Agelasticus thilius,", "preto", "banhado com espelho d'agua" ); 	
-    	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" ); 	
-    	aves[8] = new Ave("batuíra-de-papo-ferruginio", "Oreopholus ruficollis", "cinza", "campo seco baixo"); 
+        aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");
+    	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" );
+    	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" );
+    	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas");
+    	aves[4] = new Ave("grauna", "Gnorinopsar chopi", "preto", "campo seco baixo");
+    	aves[5] = new Ave("cardeal-do-banhado", "Amblyramphus holosericeus", "preto", "banhado com espelho d'agua");
+    	aves[6] = new Ave("sargento", "Agelasticus thilius,", "preto", "banhado com espelho d'agua" );
+    	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" );
+    	aves[8] = new Ave("batuíra-de-papo-ferruginio", "Oreopholus ruficollis", "cinza", "campo seco baixo");
     	aves[9] = new Ave("pomba-do-orvalho", "Patagioenas maculosa", "cinza", "campo com arores, arbustos ou arvoretas");
-      int op = 0;
+        int op = 0;
 
         //para execução do código se digitar 9 no menu
         while (op != 9){
@@ -180,6 +180,8 @@ public class FontanaApp{
                 System.out.println("\t     =========");
                 System.out.println("\t1 - Nova anotação");
                 System.out.println("\t2 - Checar anotações");
+                System.out.println("\t0 - Voltar");
+
                 op = sc.nextInt();
 
                 //Garante que resposta vai ser um dos números das opções
@@ -191,7 +193,6 @@ public class FontanaApp{
                 switch(op){
 
                     case 1:
-
                     if(contadorAnotacoes >= 10) {
                         System.out.println("Não é possível adicionar mais anotações");
                     }
@@ -218,15 +219,54 @@ public class FontanaApp{
 
                         caderno[contadorAnotacoes] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
+                        /*
                         System.out.println(caderno[contadorAnotacoes].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
                         System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
                         System.out.println(caderno[0].getAve());
+                        */
 
                         contadorAnotacoes++;
                     }
+                    break;
+
+                    case 2:
+                    System.out.println("\n\t     ANOTAÇÕES");
+                    System.out.println("\t     =========");
+                    System.out.println("\t1 - Chegar por número da anotação");
+                    System.out.println("\t2 - Checar por mês");
+                    System.out.println("\t0 - Voltar");
+                    op = sc.nextInt();
+
+                    //Garante que resposta vai ser um dos números das opções
+                    while(op != 1 && op != 2 && op != 0){
+                        System.out.println("Opção invalida");
+                        op = sc.nextInt();
+                    }
+
+                    switch(op){
+
+                        case 1:
+                        System.out.println("Insira o número da anotação desejada");
+                        int nAnotacao = sc.nextInt();
+
+                        while (nAnotacao > contadorAnotacoes){
+                            System.out.println("Número maior que o número atual de anotações");
+                            nAnotacao = sc.nextInt();
+                        }
+
+                        System.out.println("\n\nAnotação " + nAnotacao);
+                        System.out.println("Ave: " + caderno[nAnotacao - 1].getAve());
+                        System.out.printf("Data: %d/%d/%d\n", caderno[nAnotacao - 1].getDia(), caderno[nAnotacao - 1].getMes(), caderno[nAnotacao - 1].getAno());
+                        System.out.printf("Horario: %d:%2d", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto());
+
+                    }
 
                 }
+
             }
+
         }
+
     }
+
 }
