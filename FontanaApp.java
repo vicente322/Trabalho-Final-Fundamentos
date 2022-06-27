@@ -259,30 +259,32 @@ public class FontanaApp{
                         System.out.printf("Data: %d/%d/%d\n", caderno[nAnotacao - 1].getDia(), caderno[nAnotacao - 1].getMes(), caderno[nAnotacao - 1].getAno());
                         System.out.printf("Horario: %d:%2d", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto());
 
-                            
+
                         case 2:
                         System.out.println("Insira o mês da anotação desejada:");
 
                         public static void searchMes(Scanner sc, int me){
 
-                        int mesResearch = sc.nextInt();
-                         String[] result = new String[me.length];
-                        int resultCheck = 0;
+                            int mesResearch = sc.nextInt();
+                            String[] result = new String[me.length];
+                            int resultCheck = 0;
 
-                        for (i=0; i < me.length; i++){
-                            if (mesResearch == caderno[i].me && != null){
-                        System.out.println("\n\nAnotações no mês " + mesResearch);
-                        System.out.println("Ave: " + caderno[mes].getAve());
-                        System.out.printf("Data: %d/%d/%d\n", caderno[nAnotacao - 1].getDia(), caderno[nAnotacao - 1].getMes(), caderno[nAnotacao - 1].getAno());
-                        System.out.printf("Horario: %d:%2d", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto()); 
-                        resultCheck++;
-                   }
-                        else if (i == 9 && resultCheck == 0){
-                        System.out.println("\nNenhuma ave encontrada");
-               }
-            }
-        }
-    
+                            for (i=0; i < me.length; i++){
+                                if (mesResearch == caderno[i].me && != null){
+                                    System.out.println("\n\nAnotações no mês " + mesResearch);
+                                    System.out.println("Ave: " + caderno[mes].getAve());
+                                    System.out.printf("Data: %d/%d/%d\n", caderno[nAnotacao - 1].getDia(), caderno[nAnotacao - 1].getMes(), caderno[nAnotacao - 1].getAno());
+                                    System.out.printf("Horario: %d:%2d", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto());
+                                    resultCheck++;
+                                }
+                                else if (i == 9 && resultCheck == 0){
+                                    System.out.println("\nNenhuma ave encontrada");
+                                }
+
+                            }
+
+                        }
+
                     }
 
                 }
