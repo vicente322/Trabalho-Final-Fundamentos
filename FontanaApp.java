@@ -94,6 +94,10 @@ public class FontanaApp{
         }
     }
 
+    /**
+    Procura a anotacao pelo numero
+     */
+
     public static void searchNumber(Scanner sc, Anotacao[] caderno, int contador){
 
         System.out.println("Insira o número da anotação desejada");
@@ -109,6 +113,10 @@ public class FontanaApp{
         System.out.printf("Data: %d/%d/%d\n", caderno[nAnotacao - 1].getDia(), caderno[nAnotacao - 1].getMes(), caderno[nAnotacao - 1].getAno());
         System.out.printf("Horario: %d:%2d\n", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto());
     }
+
+    /**
+    Procura a anotacao pelo seu mes
+     */
 
     public static void searchMonth(Scanner sc, Anotacao[] caderno){
 
@@ -132,6 +140,10 @@ public class FontanaApp{
             }
         }
     }
+
+    /**
+    Executa os metodos
+     */
 
     public static void main(String args[]){
 
