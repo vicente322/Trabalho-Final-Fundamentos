@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class FontanaApp{
 
     /**
-     * Procura a ave pelo nome e retorna os dados associados � ela
+     * Procura a ave pelo nome e retorna os dados associados a ela
      */
 
     public static void searchName(Scanner sc, Ave[] a){
@@ -35,6 +35,9 @@ public class FontanaApp{
 
     }
 
+    /**
+     * Procura a ave pelo nome cientifico e retorna os dados associados a ela
+     */
     public static void searchScienceName(Scanner sc, Ave[] a){
 
         String research = sc.next();
