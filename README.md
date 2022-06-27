@@ -64,17 +64,17 @@ e) [1 pt] gravação de dados para arquivo. FEITO
 
 f) [1 pt] consulta de aves por um ou mais campos do catálogo.
 
-g) [1 pt] consulta de todas as aves avistadas em um certo mês do ano.
+g) [1 pt] consulta de todas as aves avistadas em um certo mês do ano. FEITO
 
-h) [1 pt] consulta de todas as aves de um certo habitat.
+h) [1 pt] consulta de todas as aves de um certo habitat. FEITO
 
 i) [1 pt] arranjo para armazenar ao menos 10 aves do catálogo de aves de Fontana et alli. FEITO
 
 j) [1 pt] arranjo para armazenar anotações do ornitólogo. FEITO
 
-k) [1 pt] repositório no GitHub, com contribuições de toda equipe.
+k) [1 pt] repositório no GitHub, com contribuições de toda equipe. FEITO
 
-l) [1 pt] documentação JavaDoc completa.
+l) [1 pt] documentação JavaDoc completa. FEITO
 
 m) [1 pt] testes automáticos de todas as operações.
 
