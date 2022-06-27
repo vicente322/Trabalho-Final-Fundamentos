@@ -58,6 +58,7 @@ public class FontanaApp{
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
         Anotacao[] caderno = new Anotacao[10];
+        contadorAnotacoes = 0;
 
         aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");
 
@@ -153,6 +154,10 @@ public class FontanaApp{
                 switch(op){
 
                     case 1:
+                    contadorAnotacoes++;
+                        if(contadorAnotacoes > 10) {
+                            System.out.println("Não é possível adicionar mais anotações");
+                        }
                     String[] data;
                     String[] horario;
                     int minuto, hora, dia, mes, ano;
@@ -173,9 +178,9 @@ public class FontanaApp{
                     System.out.println("Informe a ave avistada");
                     ave = sc.next();
 
-                    caderno[0] = new Anotacao(minuto, hora, dia, mes, ano, ave);
+                    caderno[contadorAnotacoes] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
-                    System.out.println(caderno[0].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
+                    System.out.println(caderno[contadorAnotacoes].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
                     System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
                     System.out.println(caderno[0].getAve());
                 }
