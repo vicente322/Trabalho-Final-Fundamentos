@@ -103,6 +103,8 @@ public class FontanaApp{
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
         Anotacao[] caderno = new Anotacao[10];
+      
+        int contadorAnotacoes = 0;
 
       aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");    	
     	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" );    	
@@ -189,35 +191,40 @@ public class FontanaApp{
                 switch(op){
 
                     case 1:
-                    contadorAnotacoes++;
-                        if(contadorAnotacoes > 10) {
-                            System.out.println("Não é possível adicionar mais anotações");
-                        }
-                    String[] data;
-                    String[] horario;
-                    int minuto, hora, dia, mes, ano;
-                    String ave;
 
-                    System.out.println("Informe a data (dd/mm/aaaa)");
-                    data = sc.next().split("/");
-                    dia = Integer.parseInt(data[0]);
-                    mes = Integer.parseInt(data[1]);
-                    ano = Integer.parseInt(data[2]);
+                    if(contadorAnotacoes >= 10) {
+                        System.out.println("Não é possível adicionar mais anotações");
+                    }
+                    else{
+                        String[] data;
+                        String[] horario;
+                        int minuto, hora, dia, mes, ano;
+                        String ave;
 
-                    System.out.println("Informe o horario (hh:mm)");
-                    horario = sc.next().split(":");
-                    hora = Integer.parseInt(horario[0]);
-                    minuto = Integer.parseInt(horario[1]);
+                        System.out.println("Informe a data (dd/mm/aaaa)");
+                        data = sc.next().split("/");
+                        dia = Integer.parseInt(data[0]);
+                        mes = Integer.parseInt(data[1]);
+                        ano = Integer.parseInt(data[2]);
+
+                        System.out.println("Informe o horario (hh:mm)");
+                        horario = sc.next().split(":");
+                        hora = Integer.parseInt(horario[0]);
+                        minuto = Integer.parseInt(horario[1]);
 
 
-                    System.out.println("Informe a ave avistada");
-                    ave = sc.next();
+                        System.out.println("Informe a ave avistada");
+                        ave = sc.next();
 
-                    caderno[contadorAnotacoes] = new Anotacao(minuto, hora, dia, mes, ano, ave);
+                        caderno[contadorAnotacoes] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
-                    System.out.println(caderno[contadorAnotacoes].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
-                    System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
-                    System.out.println(caderno[0].getAve());
+                        System.out.println(caderno[contadorAnotacoes].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
+                        System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
+                        System.out.println(caderno[0].getAve());
+
+                        contadorAnotacoes++;
+                    }
+
                 }
             }
         }
