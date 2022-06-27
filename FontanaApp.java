@@ -12,12 +12,10 @@ import java.util.Scanner;
 
 
 public class FontanaApp{
-    
-    /**
+   
+	/*
      * Procura a ave pelo nome e retorna os dados associados � ela
      */
-	
-	}
 
     public static void searchName(Scanner sc, Ave[] a){
 
@@ -25,7 +23,7 @@ public class FontanaApp{
         String[] result = new String[a.length];
         int resultCheck = 0; //Gambiarra pra conferir se nenhum resultado foi encontrado
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getName()).contains(research)){
                 System.out.println("\n" + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getColor() + ", " + a[i].getHabitat());
                 resultCheck++;
@@ -34,9 +32,12 @@ public class FontanaApp{
                 System.out.println("\nNenhuma ave encontrada");
             }
         }
-
     }
-
+    
+    /*
+     * Procura a ave pelo nome cientifico e retorna dados associados a ela
+     */
+    
     public static void searchScienceName(Scanner sc, Ave[] a){
 
         String research = sc.next();
@@ -52,7 +53,48 @@ public class FontanaApp{
                 System.out.println("\nNenhuma ave encontrada");
             }
         }
+    }
+    
+    /*
+     * Procura a ave pela cor e retorna dados associados a ela
+     */
+    
+    public static void searchColor(Scanner sc, Ave[] a){
 
+        String research = sc.next();
+        String[] result = new String[a.length];
+        int resultCheck = 0; 
+        
+        for (int i = 0; i < a.length; i++){
+            if (a[i] != null && (a[i].getColor()).contains(research)){
+                System.out.println("\n" + a[i].getColor() + ", " + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getHabitat());
+                resultCheck++;
+            }
+            else if (i == 9 && resultCheck == 0){
+                System.out.println("\nNenhuma ave encontrada");
+            }
+        }
+    }
+    
+    /*
+     * Procura a ave pelo habitat e retorna dados associados a ela
+     */
+    
+    public static void searchHabitat(Scanner sc, Ave[] a){
+
+        String research = sc.next();
+        String[] result = new String[a.length];
+        int resultCheck = 0; 
+        
+        for (int i = 0; i < a.length; i++){
+            if (a[i] != null && (a[i].getHabitat()).contains(research)){
+                System.out.println("\n" + a[i].getHabitat() + ", " + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getColor());
+                resultCheck++;
+            }
+            else if (i == 9 && resultCheck == 0){
+                System.out.println("\nNenhuma ave encontrada");
+            }
+        }
     }
 
     public static void main(String args[]){
@@ -61,24 +103,15 @@ public class FontanaApp{
         Ave[] aves = new Ave[10];
         Anotacao[] caderno = new Anotacao[10];
         
-        aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas"); 
-    	
-    	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" ); 
-    	
-    	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" ); 
-    	
-    	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas"); 
-    	
-    	aves[4] = new Ave("grauna", "Gnorinopsar chopi", "preto", "campo seco baixo");
-    	
-    	aves[5] = new Ave("cardeal-do-banhado", "Amblyramphus holosericeus", "preto", "banhado com espelho d'agua"); 
-    	
-    	aves[6] = new Ave("sargento", "Agelasticus thilius,", "preto", "banhado com espelho d'agua" ); 
-    	
-    	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" ); 
-    	
+        aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");    	
+    	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" );    	
+    	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" );     	
+    	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas"); 	
+    	aves[4] = new Ave("grauna", "Gnorinopsar chopi", "preto", "campo seco baixo");  	
+    	aves[5] = new Ave("cardeal-do-banhado", "Amblyramphus holosericeus", "preto", "banhado com espelho d'agua");    	
+    	aves[6] = new Ave("sargento", "Agelasticus thilius,", "preto", "banhado com espelho d'agua" ); 	
+    	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" ); 	
     	aves[8] = new Ave("batuíra-de-papo-ferruginio", "Oreopholus ruficollis", "cinza", "campo seco baixo"); 
-    	
     	aves[9] = new Ave("pomba-do-orvalho", "Patagioenas maculosa", "cinza", "campo com arores, arbustos ou arvoretas");
         int op = 0;
 
@@ -102,11 +135,10 @@ public class FontanaApp{
                 case 1:
                 System.out.println("\n\t     CATALOGO");
                 System.out.println("\t     ========");
-                System.out.println("\t1 - Nome da ave");
-                System.out.println("\t2 - Nome científico da ave");
-                System.out.println("\t3 - Cor da ave");
-                System.out.println("\t4 - Habitat da ave");
-                System.out.println("\t5 - Pesquisar ave pelo nome");
+                System.out.println("\t1 - Pesquisar pelo nome da ave");
+                System.out.println("\t2 - Pesquisar pelo nome científico da ave");
+                System.out.println("\t3 - Pesquisar pela cor da ave");
+                System.out.println("\t4 - Pesquisar pelo habitat da ave");
                 System.out.println("\t0 - Voltar");
                 op = sc.nextInt();
 
@@ -129,13 +161,14 @@ public class FontanaApp{
 
                     case 3:
                     System.out.println("\n\t COR DA AVE");
-                    searchName(sc, aves);
+                    searchColor(sc, aves);
                     break;
 
                     case 4:
                     System.out.println("\n\t HABITAT DA AVE");
-                    searchName(sc, aves);
+                    searchHabitat(sc, aves);
                     break;
+
                 }
                 break;
 
@@ -177,15 +210,11 @@ public class FontanaApp{
 
                     caderno[0] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
-                    System.out.println(caderno[0].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
-                    System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
+                    System.out.println(dia + "/" + mes + "/" + ano);
+                    System.out.println(hora + ":" + minuto);
                     System.out.println(caderno[0].getAve());
                 }
-
             }
-
         }
-
     }
-
 }
