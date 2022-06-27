@@ -94,7 +94,7 @@ public class FontanaApp{
         }
     }
 
-    public static void searchNumber(Scanner sc, Anotacao[] c){
+    public static void searchNumber(Scanner sc, Anotacao[] caderno){
 
         System.out.println("Insira o número da anotação desejada");
         int nAnotacao = sc.nextInt();
@@ -110,7 +110,7 @@ public class FontanaApp{
         System.out.printf("Horario: %d:%2d\n", caderno[nAnotacao - 1].getHora(), caderno[nAnotacao - 1].getMinuto());
     }
 
-    public static void searchMonth(Scanner sc, Anotacao[] c){
+    public static void searchMonth(Scanner sc, Anotacao[] caderno){
 
         System.out.println("Insira o mês da anotação desejada:");
         int research = sc.nextInt();
@@ -122,9 +122,9 @@ public class FontanaApp{
 
         System.out.println("Mes " + research);
 
-        for (int i = 0; i < c.length; i++){
-            if (c[i] != null && c[i].getMes() == research){
-                System.out.println(c[i].getAve());
+        for (int i = 0; i < caderno.length; i++){
+            if (caderno[i] != null && caderno[i].getMes() == research){
+                System.out.println(caderno[i].getAve());
                 resultCheck++;
             }
             else if (i == 9 && resultCheck == 0){
