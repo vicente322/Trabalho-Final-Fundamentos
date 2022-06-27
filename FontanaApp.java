@@ -26,7 +26,7 @@ public class FontanaApp{
 
         for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getName()).contains(research)){
-                System.out.println("\n" + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getColor() + ", " + a[i].getHabitat());
+                System.out.println("\n" + a[i].getName() + "\n" + a[i].getScienceName() + "\n" + a[i].getColor() + "\n" + a[i].getHabitat());
                 resultCheck++;
             }
             else if (i == 9 && resultCheck == 0){
@@ -38,7 +38,7 @@ public class FontanaApp{
     /*
      * Procura a ave pelo nome cientifico e retorna dados associados a ela
      */
-    
+
     public static void searchScienceName(Scanner sc, Ave[] a){
 
         String research = sc.next();
@@ -47,7 +47,7 @@ public class FontanaApp{
 
         for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getScienceName()).contains(research)){
-                System.out.println("\n" + a[i].getScienceName() + ", " + a[i].getName() + ", " + a[i].getColor() + ", " + a[i].getHabitat());
+                System.out.println("\n" + a[i].getScienceName() + "\n" + a[i].getName() + "\n" + a[i].getColor() + "\n" + a[i].getHabitat());
                 resultCheck++;
             }
             else if (i == 9 && resultCheck == 0){
@@ -55,20 +55,20 @@ public class FontanaApp{
             }
         }
     }
-    
+
     /*
      * Procura a ave pela cor e retorna dados associados a ela
      */
-    
+
     public static void searchColor(Scanner sc, Ave[] a){
 
         String research = sc.next();
         String[] result = new String[a.length];
-        int resultCheck = 0; 
-        
+        int resultCheck = 0;
+
         for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getColor()).contains(research)){
-                System.out.println("\n" + a[i].getColor() + ", " + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getHabitat());
+                System.out.println("\n" + a[i].getColor() + "\n" + a[i].getName() + "\n" + a[i].getScienceName() + "\n" + a[i].getHabitat());
                 resultCheck++;
             }
             else if (i == 9 && resultCheck == 0){
@@ -76,20 +76,20 @@ public class FontanaApp{
             }
         }
     }
-    
+
     /*
      * Procura a ave pelo habitat e retorna dados associados a ela
      */
-    
+
     public static void searchHabitat(Scanner sc, Ave[] a){
 
         String research = sc.next();
         String[] result = new String[a.length];
-        int resultCheck = 0; 
-        
+        int resultCheck = 0;
+
         for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getHabitat()).contains(research)){
-                System.out.println("\n" + a[i].getHabitat() + ", " + a[i].getName() + ", " + a[i].getScienceName() + ", " + a[i].getColor());
+                System.out.println("\n" + a[i].getHabitat() + "\n" + a[i].getName() + "\n" + a[i].getScienceName() + "\n" + a[i].getColor());
                 resultCheck++;
             }
             else if (i == 9 && resultCheck == 0){
