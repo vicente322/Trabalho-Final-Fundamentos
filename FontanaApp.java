@@ -12,9 +12,10 @@ import java.util.Scanner;
 
 
 public class FontanaApp{
-   
-	/*
-     * Procura a ave pelo nome e retorna os dados associados � ela
+
+
+    /**
+     * Procura a ave pelo nome e retorna os dados associados a ela
      */
 
     public static void searchName(Scanner sc, Ave[] a){
@@ -33,7 +34,7 @@ public class FontanaApp{
             }
         }
     }
-    
+
     /*
      * Procura a ave pelo nome cientifico e retorna dados associados a ela
      */
@@ -42,8 +43,8 @@ public class FontanaApp{
 
         String research = sc.next();
         String[] result = new String[a.length];
-        int resultCheck = 0; 
-        
+        int resultCheck = 0;
+
         for (int i = 0; i < a.length; i++){
             if (a[i] != null && (a[i].getScienceName()).contains(research)){
                 System.out.println("\n" + a[i].getScienceName() + ", " + a[i].getName() + ", " + a[i].getColor() + ", " + a[i].getHabitat());
@@ -102,8 +103,8 @@ public class FontanaApp{
         Scanner sc = new Scanner(System.in);
         Ave[] aves = new Ave[10];
         Anotacao[] caderno = new Anotacao[10];
-        
-        aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");    	
+
+      aves[0] = new Ave("pica-pau-branco ", "Melanerpes candidus", "branco", "campo com arores, arbustos ou arvoretas");    	
     	aves[1] = new Ave("noivinha-coroada", "Xolmis coronatus", "branco", "campo com arores, arbustos ou arvoretas" );    	
     	aves[2] = new Ave("cardeal", "Paroaria coronata", "branco", "campo com arores, arbustos ou arvoretas" );     	
     	aves[3] = new Ave("tijerila", "Xenopsaris albinucha", "branco", "campo com arores, arbustos ou arvoretas"); 	
@@ -113,7 +114,7 @@ public class FontanaApp{
     	aves[7] = new Ave("tiziu", "Volatinia jacarina", "preto", "campo com arores, arbustos ou arvoretas" ); 	
     	aves[8] = new Ave("batuíra-de-papo-ferruginio", "Oreopholus ruficollis", "cinza", "campo seco baixo"); 
     	aves[9] = new Ave("pomba-do-orvalho", "Patagioenas maculosa", "cinza", "campo com arores, arbustos ou arvoretas");
-        int op = 0;
+      int op = 0;
 
         //para execução do código se digitar 9 no menu
         while (op != 9){
@@ -188,6 +189,10 @@ public class FontanaApp{
                 switch(op){
 
                     case 1:
+                    contadorAnotacoes++;
+                        if(contadorAnotacoes > 10) {
+                            System.out.println("Não é possível adicionar mais anotações");
+                        }
                     String[] data;
                     String[] horario;
                     int minuto, hora, dia, mes, ano;
@@ -208,10 +213,10 @@ public class FontanaApp{
                     System.out.println("Informe a ave avistada");
                     ave = sc.next();
 
-                    caderno[0] = new Anotacao(minuto, hora, dia, mes, ano, ave);
+                    caderno[contadorAnotacoes] = new Anotacao(minuto, hora, dia, mes, ano, ave);
 
-                    System.out.println(dia + "/" + mes + "/" + ano);
-                    System.out.println(hora + ":" + minuto);
+                    System.out.println(caderno[contadorAnotacoes].getDia() + "/" + caderno[0].getMes() + "/" + caderno[0].getAno());
+                    System.out.println(caderno[0].getHora() + ":" + caderno[0].getMinuto());
                     System.out.println(caderno[0].getAve());
                 }
             }
